@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Histórico de Medições de Vazões</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="imagens/logo_cogerh.jpg" alt="Logo COGERH" class="logo">
+    <h1>Medições de Vazões</h1>
+  </header>
+
+  <section>
+    <p id="demo">As orientações de vazões são fundamentais para a gestão de recursos hídricos. Elas permitem monitorar o fluxo de água nos rios e córregos, auxiliando na prevenção de crises hídricas, no planejamento de reservatórios, e na tomada de decisões sobre o uso da água. Além disso, são essenciais para a implementação de políticas públicas e para o desenvolvimento sustentável das bacias hidrográficas.</p>
+  </section>
+
+  <!-- Novo Formulário de Inserção de Valores -->
+  <section>
+    <h2>Inserir Valores de Medições</h2>
+    <form id="formVazao" onsubmit="event.preventDefault(); capturarDados();">
+      <label for="data">Data:</label><br>
+      <input type="date" id="data" name="data" placeholder="Selecione a data"><br><br>
+
+      <label for="nome">Nome do Responsável:</label><br>
+      <select id="nome" name="nome">
+        <option value="">Selecione o responsável</option>
+      </select><br><br>
+
+      <label for="local">Local:</label><br>
+      <select id="local" name="local">
+        <option value="">Selecione o local</option>
+      </select><br><br>
+
+      <label for="turno">Turno:</label><br>
+      <input type="text" id="turno" name="turno" placeholder="Digite o turno"><br><br>
+
+      <label for="vazao">Vazão (m³/s):</label><br>
+      <input type="number" id="vazao" name="vazao" placeholder="Digite a vazão"><br><br>
+
+      <label for="comentario">Comentários:</label><br>
+      <textarea id="comentario" name="comentario" rows="4" cols="50" placeholder="Escreva seus comentários"></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <!-- Botões para baixar o histórico como CSV e PDF -->
+    <button onclick="exibirHistorico()">Exibir Histórico</button>
+    <button onclick="baixarHistoricoCSV()">Baixar Histórico (CSV)</button>
+    <button onclick="baixarHistoricoPDF()">Baixar Histórico (PDF)</button>
+  </section>
+
+  <!-- Seção para exibir o histórico dos dados -->
+  <section id="historico"></section>
+
+</body>
+</html>
+
+
+
+
+
+
+

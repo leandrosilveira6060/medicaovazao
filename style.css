@@ -1,0 +1,29 @@
+/* Estilo para o cabeçalho */
+header {
+    background-color: #4ea9ac;
+    padding: 20px;
+    text-align: center;        /* Centraliza todo o conteúdo dentro do header (imagem e título) */
+  }
+  
+  /* Estilo para a imagem do logo */
+  .logo {
+    width: 120px;              /* Ajuste o tamanho da imagem */
+    height: auto;              /* Mantém a proporção da imagem */
+    display: block;            /* Faz com que a imagem se comporte como um bloco */
+    margin: 0 auto 10px;       /* Centraliza a imagem horizontalmente e dá espaçamento abaixo */
+  }
+  
+  /* Estilo para o título */
+  h1 {
+    font-size: 24px;           /* Tamanho da fonte */
+    margin: 0;                  /* Remove a margem padrão do título */
+    text-align: center;        /* Garante que o título ficará centralizado */
+  }
+  
+  /* Estilo para o parágrafo */
+  #demo {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  
